@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "105a6d05-830d-4d23-b00a-da5ca0a0ccc6",
+		"name": "trail 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24333702"
+	},
+	"item": [
+		{
+			"name": "creating a board",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.trello.com/1/boards/?name={name}&key=ac5e9e216d85568c550baa974d7ad878&token=c8aaccebfea9b6158c8c369079a1d41e5bbafee9c9fecbaec7d41ccba0f2f2d2",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "{name}"
+						},
+						{
+							"key": "key",
+							"value": "ac5e9e216d85568c550baa974d7ad878"
+						},
+						{
+							"key": "token",
+							"value": "c8aaccebfea9b6158c8c369079a1d41e5bbafee9c9fecbaec7d41ccba0f2f2d2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete board",
+			"request": {
+				"method": "DELETE",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get a board",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/636caec68226ba0016646053?key=ac5e9e216d85568c550baa974d7ad878&token=c8aaccebfea9b6158c8c369079a1d41e5bbafee9c9fecbaec7d41ccba0f2f2d2",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"636caec68226ba0016646053"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "ac5e9e216d85568c550baa974d7ad878"
+						},
+						{
+							"key": "token",
+							"value": "c8aaccebfea9b6158c8c369079a1d41e5bbafee9c9fecbaec7d41ccba0f2f2d2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get action of board",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "update a board",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

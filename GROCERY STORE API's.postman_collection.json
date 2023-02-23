@@ -1,0 +1,612 @@
+{
+	"info": {
+		"_postman_id": "50f88686-9d68-4087-a819-d9c5deef678d",
+		"name": "GROCERY STORE API's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24333702"
+	},
+	"item": [
+		{
+			"name": "PRODUCT",
+			"item": [
+				{
+					"name": "API STATUS",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL PRODUCTS",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/products",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET SINGLE PRODUCT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/products/4646",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"products",
+								"4646"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CART DETAILS",
+			"item": [
+				{
+					"name": "CREATE NEW CART",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/carts",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET CART",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/carts/gLhDJ53KRcn8SlzOtYxLa",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"carts",
+								"gLhDJ53KRcn8SlzOtYxLa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET  CART ITEMS",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/carts/gLhDJ53KRcn8SlzOtYxLa/items",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"carts",
+								"gLhDJ53KRcn8SlzOtYxLa",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADD ITEAM TO CART",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\" : 1225\r\n\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/carts/gLhDJ53KRcn8SlzOtYxLa/items",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"carts",
+								"gLhDJ53KRcn8SlzOtYxLa",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE QUANTITY",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\":6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/carts/gLhDJ53KRcn8SlzOtYxLa/items/71785565",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"carts",
+								"gLhDJ53KRcn8SlzOtYxLa",
+								"items",
+								"71785565"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REPLACE PRODUCT IN CART",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"productId\": 5851,\r\n   \"quantity\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/carts/gLhDJ53KRcn8SlzOtYxLa/items/807522763",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"carts",
+								"gLhDJ53KRcn8SlzOtYxLa",
+								"items",
+								"807522763"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE ITEM IN CART",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/carts/gLhDJ53KRcn8SlzOtYxLa/items/768746538",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"carts",
+								"gLhDJ53KRcn8SlzOtYxLa",
+								"items",
+								"768746538"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "REGISTRATION",
+			"item": [
+				{
+					"name": "REGISTER API CLIENT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"clientName\": \"Postman on Ernest's computer12345\",\r\n  \"clientEmail\": \"ernest12345@example.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/api-clients",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"api-clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE AN ORDER",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{GROCERY STORE}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"cartId\": \"gLhDJ53KRcn8SlzOtYxLa\",\r\n   \"customerName\": \"amit\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/orders?=gLhDJ53KRcn8SlzOtYxLa",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "gLhDJ53KRcn8SlzOtYxLa"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE AN ORDER",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://simple-grocery-store-api.glitch.me/orders/ymcNVmnJ0RyIkAlA0Zhys",
+							"protocol": "https",
+							"host": [
+								"simple-grocery-store-api",
+								"glitch",
+								"me"
+							],
+							"path": [
+								"orders",
+								"ymcNVmnJ0RyIkAlA0Zhys"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
